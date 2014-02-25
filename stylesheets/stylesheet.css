@@ -73,14 +73,23 @@ Styles
 }
 
 #wrapper {
+  height: 100%
   padding: 0 10px;
   max-width: 980px;
   margin: 0 auto;
 }
 
+#head {
+/*  height: 100px;  
+  background: black;
+  opacity: 0.3;
+*/}
+
 header {
-  height: 140px;  
-  line-height: 140px;
+  /*position: absolute;*/
+  /*float: top;*/
+  height: 180px;
+  line-height: 180px;
 }
 
 header h1#title {
@@ -111,6 +120,7 @@ header h1#title {
   opacity:0.0;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
+  /*pointer-events: none;*/
 }
 
 #projects .grid:after {
@@ -147,8 +157,25 @@ header h1#title {
 
 
 
+/*******************************************************************************
+Featherlight
+*******************************************************************************/
 
+.featherlight {
+  
+}
 
+.featherlight .featherlight-content {
+  width: 90%;
+  max-height: none;
+  padding: 0;
+  background: none;
+}
+
+.featherlight .featherlight-image {
+  overflow: hidden;
+  max-height: none;
+}
 
 
 

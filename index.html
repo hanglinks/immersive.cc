@@ -8,6 +8,10 @@
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic,300italic,400italic' rel='stylesheet' type='text/css'> 
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,200italic,300italic,400italic,600,600italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300,700' rel='stylesheet' type='text/css'>
+
+    <link href="stylesheets/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
+    <link href="stylesheets/featherlight.gallery.min.css" type="text/css" rel="stylesheet" title="Featherlight Gallery" />
+
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
     <title>Immersive.cc</title>
@@ -20,18 +24,19 @@
     <div id="wrapper">
 
     <!-- HEADER -->
-
-      <header>
-        <h1 id="title">Immersive Computing Lab</h1>
-      </header>
+      <!-- <div id="head"> -->
+        <header>
+          <h1 id="title">Immersive Computing Lab</h1>
+        </header>
+      <!-- </div> -->
 
       <!-- MAIN -->
 
       <div id="projects">
-        <div id="project-1" class="grid" data-content="Blurred Lines">
+        <div id="project-1" class="grid" data-featherlight="test.jpg" data-content="Blurred Lines">
           <img src="test.jpg">
         </div>
-        <div id="project-2" class="grid">
+        <div id="project-2" data-featherlight="test.jpg" class="grid">
           <img src="test.jpg">
         </div>
         <div id="project-3" class="grid">
@@ -53,4 +58,6 @@
 </html>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="./javascripts/main.js"></script>
+<script src="javascripts/featherlight.min.js"></script>
+<script src="javascripts/featherlight.gallery.min.js"></script>
+<script src="javascripts/main.js"></script>
