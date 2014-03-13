@@ -100,6 +100,8 @@ header h1#title {
   /*text-shadow: 1px 1px 3px #ccc;*/
 }
 
+/* Projects */
+
 #projects {
   /*background: green;*/
   max-width: 960px;
@@ -142,7 +144,7 @@ header h1#title {
   color:#fff;
   z-index:1;
   text-align:center;
-*/}
+}
 
 #projects .grid:hover:before {
     opacity:1;
@@ -153,8 +155,108 @@ header h1#title {
   width: 100%;
 }
 
+/* Project */
 
+.project {
+  position: relative;
+  overflow: auto;
+}
+  
+.project li {
+  list-style: none;
+}
 
+.project ul li {
+  float: left;
+}
+
+.project ul li img {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.project .description {
+  position: absolute;
+  /*border: 2px solid yellow;*/
+  top: 0%;
+  left: 10%;
+  right: 10%;
+  bottom: 0%;
+  color: white;
+  padding: 5% 0 0 0;
+}
+
+.project .description h1 {
+  font-size: 3rem;
+  font-weight: 200;
+}
+
+.project .cover {
+  position: absolute;
+  top: 0%;
+  right: 50%;
+  bottom: 0%;
+  left: 0%;
+  background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+}
+
+.project .next, .prev {
+  display: table;
+  position: absolute;
+  /*border: 2px solid grey;*/
+  top: 0%;
+  width: 10%;
+  height: 100%;
+  user-select: none;
+  font-size: 4rem;
+  text-align: center;
+  color: white;
+  /*font-weight: 100;*/
+}
+
+.project .arrow {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.project .next {
+}
+
+.project .prev {
+  right: 0%;
+}
+
+.project ol.dots {
+  position: absolute;
+  display: block;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  margin: 0 auto 0 auto;
+  width: 4rem;
+  /*text-align: center;*/
+}
+
+.project ol.dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  color: grey;
+}
+
+.project ol.dots .active {
+  color: white;
+}
 
 
 /*******************************************************************************
@@ -166,17 +268,25 @@ Featherlight
 }
 
 .featherlight .featherlight-content {
-  width: 90%;
+  width: 100%;
   max-height: none;
   padding: 0;
   background: none;
 }
 
 .featherlight .featherlight-image {
-  overflow: hidden;
+/*  overflow: hidden;
   max-height: none;
-}
+*/}
 
+.featherlight .featherlight-close {
+  width: 10%;
+  height: 10%; 
+  color: white;
+  background: none;
+  border: 2px solid white;
+  /*font-size: 4rem;*/
+}
 
 
 
