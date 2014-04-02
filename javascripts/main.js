@@ -13,8 +13,8 @@ $(document).ready(function() {
 	var setupUnslider = function (element) {
 
 		$('.project').unslider({
-			speed: 500,               //  The speed to animate each slide (in milliseconds)
-			delay: 3000,              //  The delay between slide animations (in milliseconds)
+			speed: 300,               //  The speed to animate each slide (in milliseconds)
+			delay: 9000000,              //  The delay between slide animations (in milliseconds)
 			complete: function() {},  //  A function that gets called after every slide animation
 			keys: true,               //  Enable keyboard (left, right) arrow shortcuts
 			dots: true,               //  Display dot navigation
@@ -37,6 +37,7 @@ $(document).ready(function() {
 
 
 	var featherlightConfig = function () {
+		console.log("-- Featherlight Config --\n");
 		$.featherlight.defaults =
 			{
 		    selector:     '[data-featherlight]',  /* elements that trigger the lightbox */
@@ -55,7 +56,7 @@ $(document).ready(function() {
 		    variant:      null,                   /* class that will be added to change look of the lightbox */
 		    closeOnBg:    true,                   /* close lightbox on click on the background */
 		    closeOnEsc:   true,                   /* close lightbox when pressing esc */
-		    closeIcon:    '&#10005;',             /* close icon */
+		    // closeIcon:    'x',             				/* close icon */
 		    background:   null,                   /* custom DOM for the background, wrapper and the closebutton */
 		    autostart:    true,                   /* initialize all links with that match "selector" on document ready */
 		    open: function(event){                /* opens the lightbox "this" contains $instance with the lightbox, and with the config */
@@ -74,7 +75,42 @@ $(document).ready(function() {
 		featherlightOpen.apply(this, event); 
 		console.log("-- Unslider --\n");
 		setupUnslider('.project');
+		// imageResize();
 	}
 
+
+	var imageResize = function() {
+		$(".project .images img").each(function(){
+			console.log("-- Resize --\n");
+			console.log(this);
+		    // Uncomment the following if you need to make this dynamic
+		    var refH = $(window).height();
+		    var refW = $(window).width();
+		    var refRatio = refW/refH;
+
+		    console.log(refH);
+		    console.log(refW);
+		    console.log(refRatio);
+
+		    var imgH = $(this).height();
+		    var imgW = $(this).width();
+
+		    console.log(imgH);
+		    console.log(imgW);
+
+		    if ( (imgW/imgH) > refRatio ) { 
+		    		console.log("Greater than");
+		        $(this).css("height", refW + "px");
+		        $(this).css("width", "auto");
+		    } else {
+		    		console.log("Less than");
+		        $(this).css("height", "auto");
+		        $(this).css("width", "100%");
+		    }
+		})
+	}
+
+	// $(window).resize(imageResize);
+	// imageResize();
 
 });
