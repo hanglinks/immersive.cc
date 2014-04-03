@@ -66,7 +66,7 @@ Styles
 #strip {
   width: 100%;
   height: 8px;
-  /*background: -webkit-linear-gradient(#ccc, #eee);*/
+  background: -webkit-linear-gradient(#ccc, #eee);
   background-color: #ddd;
   opacity: 0.8;
   margin-bottom: -8px;
@@ -80,10 +80,10 @@ Styles
 }
 
 #head {
-/*  height: 100px;  
+  height: 800px;  
   background: black;
   opacity: 0.3;
-*/}
+}
 
 header {
   /*position: absolute;*/
@@ -158,41 +158,11 @@ header h1#title {
 /* Project */
 
 .project {
-  position: relative;
-  overflow: auto;
-  height: 100%;
-  min-width: 100%; /* fix unslider width issue */
-}
-  
-.project ul.images {
-  list-style: none;
-}
-
-.project ul.images li {
-  float: left;
-}
-
-.project ul.images li img {
-  /* Set rules to fill background */
-  /*min-height: 100%;*/
-  /*min-width: 1024px;*/
-  
-  /* Set up proportionate scaling */
-  width: 100%;
-  
-  /* Set up positioning */
-  position: relative;
-  top: 0;
-  left: 0;
-  margin: 0 auto 0 auto;
-}
-
-.landscape {
-  width: 100%;
-}
-
-.portrait {
-  height: 100%;
+  /*position: relative;*/
+  /*overflow: auto;*/
+  /*height: 100%;*/
+  /*min-width: 100%;*/
+  /*-webkit-animation: fadein 1s;*/
 }
 
 .project .description {
@@ -204,11 +174,17 @@ header h1#title {
   bottom: 0%;
   color: white;
   padding: 5% 0 0 0;
+  z-index: 3;
 }
 
 .project .description h1 {
   font-size: 3rem;
   font-weight: 200;
+  margin-bottom: 0.5em;
+}
+
+.project .description p {
+  
 }
 
 .project .cover {
@@ -218,12 +194,13 @@ header h1#title {
   bottom: 0%;
   left: 0%;
   background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
+  z-index: 3;
 }
 
 .project .next, .prev {
   position: fixed;
   display: table;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   top: 0%;
   width: 10%;
   height: 100%;
@@ -231,7 +208,9 @@ header h1#title {
   font-size: 4rem;
   text-align: center;
   color: white;
+  text-decoration: none;
   /*font-weight: 100;*/
+  z-index: 3;
 }
 
 .project .arrow {
@@ -246,36 +225,38 @@ header h1#title {
 .project .prev {
 }
 
-.project ol.dots {
+.project .slides-pagination {
   position: fixed;
   display: block;
-  bottom: 20%;
+  bottom: 10%;
   left: 0;
   right: 0;
   margin: 0 auto 0 auto;
   width: 4rem;
   /*text-align: center;*/
+  z-index: 3;
 }
 
-.project ol.dots .dot {
+.project .slides-pagination a {
   display: inline-block;
   width: 10px;
   height: 10px;
   color: grey;
+  text-decoration: none;
 }
 
-.project ol.dots .active {
+.project .slides-pagination a.current{
   color: white;
 }
 
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 /*******************************************************************************
 Featherlight
 *******************************************************************************/
-
-.featherlight {
-  
-}
 
 .featherlight .featherlight-content {
   width: 100%;
@@ -285,11 +266,6 @@ Featherlight
   background: none;
 }
 
-.featherlight .featherlight-image {
-/*  overflow: hidden;
-  max-height: none;
-*/}
-
 .featherlight .featherlight-close {
   width: 10%;
   height: 10%; 
@@ -297,7 +273,7 @@ Featherlight
   background: none;
   /*border: 2px solid white;*/
   padding-top: 2%;
-  /*font-size: 4rem;*/
+  font-size: 2rem;
 }
 
 
