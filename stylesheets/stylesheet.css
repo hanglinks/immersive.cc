@@ -82,14 +82,14 @@ header {
   background-position: center 0%;
 }
 
-#head-cover {
+#cover {
   position: absolute;
   top: 0;
   height: 800px;
   width: 100%;  
   /*opacity: 0.5;*/
   /*background: black;*/
-  background: linear-gradient(to top, rgba(0,0,0,1) 5%, rgba(0,0,0,0) 15%, rgba(0,0,0,1) 52%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top, rgba(0,0,0,1) 2%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.9) 48%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,0) 100%);
   /*-webkit-animation: fadein 0.5s;*/
 }
 
@@ -109,7 +109,7 @@ header h1#title {
   -webkit-animation: fadein 2s;
 }
 
-#description {
+header #description {
   position: absolute;
   top: 42%;
   text-align: center;
@@ -125,7 +125,7 @@ header h1#title {
   -webkit-animation: fadein 4s;
 }
 
-#projects-link {
+header #projects-link {
   position: absolute;
   margin-left: -30px;
   bottom: 5%;
@@ -201,7 +201,7 @@ header h1#title {
 /* Project */
 
 .project {
-  /*position: relative;*/
+  position: relative;
   /*overflow: auto;*/
   /*height: 100%;*/
   /*min-width: 100%;*/
@@ -227,7 +227,8 @@ header h1#title {
 }
 
 .project .description p {
-  
+  font-size: 1.5rem;
+  font-weight: 200;
 }
 
 .project .cover {
