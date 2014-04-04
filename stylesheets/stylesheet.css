@@ -89,7 +89,12 @@ header {
   width: 100%;  
   /*opacity: 0.5;*/
   /*background: black;*/
-  background: linear-gradient(to top, rgba(0,0,0,1) 2%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.9) 48%, rgba(0,0,0,0.9) 65%, rgba(0,0,0,0) 100%);
+  background: linear-gradient(to top,
+    rgba(0,0,0,1) 2%,
+    rgba(0,0,0,0.3) 25%,
+    rgba(0,0,0,0.9) 48%,
+    rgba(0,0,0,0.9) 65%,
+    rgba(0,0,0,0) 100%);
   /*-webkit-animation: fadein 0.5s;*/
 }
 
@@ -147,24 +152,27 @@ header #projects-link {
 
 #projects {
   /*background: green;*/
+  position: relative;
   max-width: 960px;
   font-size: 0px;
+  outline: 1px solid red;
+  text-align: center;
 }
 
 #projects .grid {
   position: relative;
   display: inline-block;
   max-width: 440px;
-  margin: 0 40px 40px 0;
-  /*margin: 0;*/
-  /*background-color: orange;*/
+  margin: 0 20px 40px 20px; /*TODO: make margins work properly on mobile*/
+  text-align: left;
+  /*border: 1px solid red;*/
 }
 
 #projects .grid:before, .grid:after{
   position:absolute;
   opacity:0.0;
   transition: all 0.5s;
-  -webkit-transition: all 0.5s;
+  /*-webkit-transition: all 0.5s;*/
   /*pointer-events: none;*/
 }
 
@@ -181,6 +189,7 @@ header #projects-link {
 
 #projects .grid:before {
   content: attr(data-content);
+  margin: 1em auto;
   font-size: 1.6rem;
   font-weight: 200;
   width:100%;
