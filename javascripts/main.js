@@ -42,4 +42,10 @@ $(document).ready(function() {
 		featherlightOpen.apply(this, event); 
 		setupSuperslides('.project');
 	}
+
+  $('#projects-link').click(function() {
+    console.log("\nProjects!");
+    $('body').scrollTo('#projects-wrapper', 200);
+  });
+
 });
